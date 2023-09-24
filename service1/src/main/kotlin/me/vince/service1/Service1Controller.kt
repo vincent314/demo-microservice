@@ -10,9 +10,9 @@ class Service1Controller(val webClient: WebClient) {
 
     @GetMapping("/greetings")
     suspend fun greetings(): String {
-        val service2Response: String = webClient.get()
-            .uri("/name")
-            .retrieve().awaitBody()
-        return "Greetings from $service2Response"
+        val (name, port) = webClient.get()
+            .uri("/info")
+            .retrieve().awaitBody<Info>()
+        return "Greetings from $name ($port)"
     }
 }
