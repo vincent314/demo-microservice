@@ -5,20 +5,8 @@ GET http://localhost:8761/eureka/apps
 ### call SERVICE 1
 GET http://localhost:8111/greetings
 
-### call SERVICE 1
-GET http://localhost:8111/greetings
-
-### call SERVICE 1 actuator
-GET http://localhost:8112/actuator
-
 ### call SERVICE 2
 GET http://localhost:8222/name
 
-### call ZUUL gateway
+### call SERVICE 1 via gateway
 GET http://localhost:8080/service1/greetings
-
-### call ZUUL gateway
-GET http://localhost:8080/service2/name
-
-###
-GET http://localhost:8080/actuator
