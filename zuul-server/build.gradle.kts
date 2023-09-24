@@ -21,15 +21,12 @@ repositories {
 extra["springCloudVersion"] = "2022.0.4"
 
 dependencies {
+	implementation("org.springframework.boot:spring-boot-starter")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.springframework.cloud:spring-cloud-starter-netflix-eureka-client")
-	testImplementation("org.springframework.boot:spring-boot-starter-test")
-
-	implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core")
-	implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor")
-	implementation("org.springframework.boot:spring-boot-starter-webflux")
+	implementation("org.springframework.cloud:spring-cloud-starter-gateway")
 	implementation("org.springframework.boot:spring-boot-starter-actuator")
-	implementation("org.springframework.cloud:spring-cloud-starter-loadbalancer")
+	testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
 
 dependencyManagement {
@@ -37,6 +34,7 @@ dependencyManagement {
 		mavenBom("org.springframework.cloud:spring-cloud-dependencies:${property("springCloudVersion")}")
 	}
 }
+
 
 tasks.withType<KotlinCompile> {
 	kotlinOptions {
