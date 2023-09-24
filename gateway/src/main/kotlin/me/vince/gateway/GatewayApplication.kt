@@ -1,4 +1,4 @@
-package me.vince.zuulserver
+package me.vince.gateway
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
@@ -6,8 +6,8 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient
 
 @SpringBootApplication
 @EnableDiscoveryClient
-class ZuulServerApplication
+class GatewayApplication
 
 fun main(args: Array<String>) {
-	runApplication<ZuulServerApplication>(*args)
+	runApplication<GatewayApplication>(*args)
 }
