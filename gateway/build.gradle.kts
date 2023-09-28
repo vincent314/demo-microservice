@@ -5,6 +5,7 @@ plugins {
 	id("io.spring.dependency-management") version "1.1.3"
 	kotlin("jvm") version "1.8.22"
 	kotlin("plugin.spring") version "1.8.22"
+	application
 }
 
 group = "me.vince"
@@ -46,3 +47,8 @@ tasks.withType<KotlinCompile> {
 tasks.withType<Test> {
 	useJUnitPlatform()
 }
+
+application {
+	mainClass.set("me.vince.gateway.GatewayApplicationKt")
+}
+
