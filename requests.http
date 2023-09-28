@@ -6,7 +6,7 @@ GET http://localhost:8761/eureka/apps
 GET http://localhost:8111/greetings
 
 ### call SERVICE 2
-GET http://localhost:8222/name
+GET http://localhost:8222/info
 
 ### call SERVICE 1 via gateway
 GET http://localhost:8080/service1/greetings
